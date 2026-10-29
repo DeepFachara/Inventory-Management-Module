@@ -1,0 +1,33 @@
+﻿
+@model InventoryManagementModule.Models.Product
+
+@{
+    Layout = null;
+}
+
+<h2>Edit Product</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(m => m.ProductId)
+
+    <p>Product Name:</p>
+    @Html.TextBoxFor(m => m.ProductName)
+    <br />
+    <br />
+
+    <p>Quantity:</p>
+    @Html.TextBoxFor(m => m.Quantity)
+    <br />
+    <br />
+
+    <p>Price:</p>
+    @Html.TextBoxFor(m => m.Price)
+    <br />
+    <br />
+
+    <input type="submit" value="Update Product" />
+}
+
+<br />
+@Html.ActionLink("Back to Inventory", "Index")

@@ -1,0 +1,31 @@
+﻿
+@model InventoryManagementModule.Models.Product
+
+@{
+    Layout = null;
+}
+
+<h2>Add New Product</h2>
+
+@using (Html.BeginForm())
+{
+    <p>Product Name:</p>
+    @Html.TextBoxFor(m => m.ProductName)
+    <br />
+    <br />
+
+    <p>Quantity:</p>
+    @Html.TextBoxFor(m => m.Quantity)
+    <br />
+    <br />
+
+    <p>Price:</p>
+    @Html.TextBoxFor(m => m.Price)
+    <br />
+    <br />
+
+    <input type="submit" value="Save Product" />
+}
+
+<br />
+@Html.ActionLink("Back to Inventory", "Index")
